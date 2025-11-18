@@ -42,13 +42,14 @@ body {
     display: none !important;
 }
 
-/* Títulos Vivos (Luckiest Guy para um toque Retrô/Neon) */
+/* Títulos Vivos (CORRIGIDO: Usando Bebas Neue) */
 .titulo-principal {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 3em;
+    font-family: 'Bebas Neue', sans-serif; /* FONTE CORRIGIDA */
+    font-size: 4em; /* Tamanho ajustado para Bebas Neue */
     color: var(--amarelo-mostarda);
     text-shadow: 2px 2px 0px var(--vermelho-acao); /* Efeito Neon/Letreiro */
     margin: 10px 0 5px;
+    letter-spacing: 2px; /* Espaçamento para efeito Neon */
 }
 
 .subtitulo-tema {
@@ -147,7 +148,7 @@ body {
     transform: scale(1.02);
 }
 
-/* 💻 SPLASH SCREEN */
+/* 💻 SPLASH SCREEN (CORRIGIDO: Usando Bebas Neue) */
 #splashScreen {
     position: fixed;
     top: 0;
@@ -163,11 +164,12 @@ body {
 }
 
 .splash-title {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 4em;
+    font-family: 'Bebas Neue', sans-serif; /* FONTE CORRIGIDA */
+    font-size: 5em; /* Tamanho ajustado para Bebas Neue */
     color: var(--amarelo-mostarda);
     text-shadow: 4px 4px 0px var(--vermelho-acao);
     line-height: 1.1;
+    letter-spacing: 3px; /* Espaçamento para efeito Neon */
 }
 
 .splash-subtitle {
@@ -175,7 +177,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Animação e Motion (Manter a mesma estrutura, apenas adaptar a cor) */
+/* Animação e Motion */
 .fade-item {
     opacity: 0;
     transform: translateY(20px);
@@ -197,7 +199,7 @@ body {
     }
     
     .titulo-principal {
-        font-size: 4em;
+        font-size: 5em; /* Aumenta o tamanho no desktop */
     }
     
     .botoes-area {
@@ -208,8 +210,8 @@ body {
     .btn-acao {
         width: 48%; 
     }
-    
-    #splashScreen {
-        background-color: var(--fundo-escuro); /* Remove o fundo temático do splash para ser mais limpo */
+
+    .splash-title {
+        font-size: 6em; /* Aumenta o tamanho no desktop */
     }
 }
