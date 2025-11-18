@@ -1,0 +1,215 @@
+/* PALETA VIBRANTE DE BOTECO: Vermelho Saturao, Amarelo Mostarda, Verde Garrafa */
+:root {
+    --vermelho-acao: #e74c3c; 
+    --amarelo-mostarda: #f1c40f; 
+    --verde-garrafa: #27ae60; 
+    --fundo-escuro: #34495e; 
+    --texto-claro: #ecf0f1; 
+}
+
+/* Base e Fundo de Bar (Azulejo/Madeira) */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--texto-claro);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+    /* Fundo Temático: Padrão de textura (exemplo, ou você pode usar uma imagem aqui) */
+    background: var(--fundo-escuro);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bar-texture.jpg'); /* Se for usar imagem, substitua 'bar-texture.jpg' */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.convite-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(44, 62, 80, 0.95); /* Semi-transparente para ver o fundo */
+    padding: 20px 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 100vh; /* Ocupa a tela inteira no mobile */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Títulos Vivos (Luckiest Guy para um toque Retrô/Neon) */
+.titulo-principal {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    color: var(--amarelo-mostarda);
+    text-shadow: 2px 2px 0px var(--vermelho-acao); /* Efeito Neon/Letreiro */
+    margin: 10px 0 5px;
+}
+
+.subtitulo-tema {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--texto-claro);
+    margin-bottom: 25px;
+}
+
+/* Card de Informações */
+.card {
+    background-color: rgba(52, 73, 94, 0.85);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 3px solid var(--amarelo-mostarda);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 1.4em;
+    color: var(--vermelho-acao);
+    border-bottom: 2px dashed var(--amarelo-mostarda);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Fotos e Container */
+.foto-container {
+    border: 5px solid var(--vermelho-acao);
+    border-radius: 8px;
+    margin: 15px auto 25px;
+    max-width: 300px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.5); /* Brilho amarelo */
+}
+
+.foto-hero, .foto-detalhe {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.foto-detalhe {
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* Detalhes de Texto */
+.detalhe-info strong {
+    color: var(--amarelo-mostarda);
+}
+
+/* Botões de Ação */
+.botoes-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.btn-acao {
+    border: none;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+}
+
+.btn-splash {
+    background-color: var(--verde-garrafa);
+    color: var(--texto-claro);
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.btn-musica {
+    background-color: var(--vermelho-acao);
+    color: var(--texto-claro);
+}
+
+.btn-musica.pausada {
+    background-color: #2c3e50; /* Cinza Escuro quando parado */
+}
+
+.btn-rsvp {
+    background-color: var(--amarelo-mostarda);
+    color: #333;
+}
+
+.btn-acao:hover {
+    transform: scale(1.02);
+}
+
+/* 💻 SPLASH SCREEN */
+#splashScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--fundo-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.splash-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+    color: var(--amarelo-mostarda);
+    text-shadow: 4px 4px 0px var(--vermelho-acao);
+    line-height: 1.1;
+}
+
+.splash-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Animação e Motion (Manter a mesma estrutura, apenas adaptar a cor) */
+.fade-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Query para Desktop (Responsivo - Telas maiores que 600px) */
+@media (min-width: 600px) {
+    .convite-container {
+        border-radius: 15px;
+        padding: 40px;
+        margin: 40px 0;
+        min-height: initial;
+    }
+    
+    .titulo-principal {
+        font-size: 4em;
+    }
+    
+    .botoes-area {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .btn-acao {
+        width: 48%; 
+    }
+    
+    #splashScreen {
+        background-color: var(--fundo-escuro); /* Remove o fundo temático do splash para ser mais limpo */
+    }
+}

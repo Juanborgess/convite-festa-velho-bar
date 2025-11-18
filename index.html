@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Exclusivo | Velho de Bar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="splashScreen">
+        <div class="splash-content">
+            <h1 class="splash-title">O VELHO CHAMA!</h1>
+            <p class="splash-subtitle">Toque para entrar e ligar o Passadão</p>
+            <button id="iniciarConvite" class="btn-acao btn-splash">ENTRAR NA FESTA</button>
+        </div>
+    </div>
+
+    <div id="convitePrincipal" class="convite-container hidden">
+        
+        <audio id="musicaPassadao" src="passadao.mp3" preload="auto" loop></audio>
+
+        <header class="section-container fade-item" data-delay="0.1">
+            <div class="header-content">
+                <h1 class="titulo-principal">VOCÊ ESTÁ CONVIDADO!</h1>
+                <h2 class="subtitulo-tema">O Boteco do Felipe Silva</h2>
+            </div>
+            
+            <div class="foto-container">
+                <img src="./assets/foto-cerveja.png" alt="Aniversariante com cerveja e joinha" class="foto-hero">
+            </div>
+        </header>
+
+        <section class="section-container fade-item" data-delay="0.3">
+            <div class="card detalhes">
+                <h3 class="card-title">🍻 DETALHES DO EVENTO</h3>
+                <div class="detalhe-item">
+                    <p class="detalhe-info"><strong>DATA:</strong> Sábado, 29/11</p>
+                    <p class="detalhe-info"><strong>HORA:</strong> 13h</p>
+                    <p class="detalhe-info"><strong>LOCAL:</strong> Bene House</p>
+                </div>
+                <img src="./assets/foto-domino.png" alt="Aniversariante jogando dominó" class="foto-detalhe">
+            </div>
+        </section>
+
+        <section class="section-container fade-item" data-delay="0.5">
+             <div class="card dress-code">
+                <h3 class="card-title">🎩 VENHA A CARÁTER</h3>
+                <p class="chamada-tema">O tema é <b>VELHO DO BAR</b>. Capriche na camisa listrada e prepare-se para pedir mais uma rodada de Passadão.</p>
+                <img src="./assets/foto-whisky.png" alt="Aniversariante com garrafa de whisky" class="foto-detalhe">
+            </div>
+        </section>
+
+        <section class="section-container botoes-area fade-item" data-delay="0.7">
+            <button id="controleMusica" class="btn-acao btn-musica">
+                <span id="textoMusica">⏸️ PARAR O PASSADÃO</span>
+            </button>
+            
+            <a id="btnRSVP" href="#" target="_blank" class="btn-acao btn-rsvp">
+                ✅ CONFIRMAR PRESENÇA
+            </a>
+        </section>
+
+        <footer>
+            <p>Confirme o mais rápido possível!</p>
+        </footer>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
